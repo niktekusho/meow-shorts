@@ -1,0 +1,81 @@
+{
+    "name": "meow-shorts",
+    "version": "0.0.1",
+    "description": "Additional shortcuts for meow... Meow!",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "license": "MIT",
+    "scripts": {
+        "coverage": "nyc ava",
+        "release": "np",
+        "test": "xo && ava && tsd-check"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "xo": {
+        "ignores": [
+            "*d.ts"
+        ],
+        "envs": [
+            "jest"
+        ]
+    },
+    "jest": {
+        "collectCoverage": true
+    },
+    "author": {
+        "name": "Nicola Dal Maso",
+        "url": "https://github.com/niktekusho/"
+    },
+    "bugs": {
+        "url": "https://github.com/niktekusho/meow-shorts/issues"
+    },
+    "contributors": [
+        {
+            "name": "Nicola Dal Maso",
+            "url": "https://github.com/niktekusho/"
+        }
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "homepage": "https://github.com/niktekusho/meow-shorts",
+    "keywords": [
+        "cli",
+        "bin",
+        "util",
+        "utility",
+        "helper",
+        "argv",
+        "command",
+        "line",
+        "meow",
+        "cat",
+        "kitten",
+        "parser",
+        "option",
+        "flags",
+        "input",
+        "cmd",
+        "console",
+        "wrapper"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/niktekusho/meow-shorts"
+    },
+    "devDependencies": {
+        "@types/meow": "^5.0.0",
+        "ava": "^1.2.1",
+        "execa": "^1.0.0",
+        "meow": "^5.0.0",
+        "np": "^4.0.2",
+        "nyc": "^13.2.0",
+        "tsd-check": "^0.3.0",
+        "xo": "^0.24.0"
+    },
+    "peerDependencies": {
+        "meow": "^5.0.0"
+    }
+}
