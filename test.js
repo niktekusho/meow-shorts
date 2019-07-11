@@ -9,7 +9,7 @@ test('on default options should exit on -h flag with exit code 2', async t => {
 		await execa('fixtures/default.opts.js', ['-h']);
 		t.fail('Promise should reject since meow\'s default exit code for help command is 2.');
 	} catch (error) {
-		t.is(error.code, 2);
+		t.is(error.exitCode, 2);
 		t.true(error.stdout.includes('test'));
 	}
 });
@@ -34,6 +34,6 @@ test('with disabled version option should NOT exit on -v flag', async t => {
 });
 
 test('should exit with custom exit code when using -h flag', async t => {
-	const {code} = await execa('fixtures/custom.help.status.code.js', ['-h']);
-	t.is(code, 0);
+	const {exitCode} = await execa('fixtures/custom.help.status.code.js', ['-h']);
+	t.is(exitCode, 0);
 });
