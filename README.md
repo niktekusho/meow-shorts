@@ -12,7 +12,7 @@ This library is a wrapper for the [faboulous meow](https://github.com/sindresorh
 -  `-h` for ``--help``
 -  `-v` for ``--version``
 
-Basically what this library does is to call `showHelp()` and `showVersion()` when the command arguments contain either '-h' or '-v' respectively.
+Basically this library calls `showHelp()` and `showVersion()` when the command arguments contain either '-h' or '-v' respectively.
 
 **This is a module built ad-hoc for meow, so this is the reason why meow is a peer dependency for this project.**
 
