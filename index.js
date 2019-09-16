@@ -16,4 +16,3 @@ function wrap(cli, options) {
 }
 
 module.exports = wrap;
-module.exports.default = wrap;

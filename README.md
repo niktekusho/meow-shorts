@@ -98,7 +98,7 @@ Explicitly disable the '-v' shortcut to the 'version' command.
 Type: `number`<br>
 Default: `undefined`
 
-Set a custom exit code for the 'help' command. If you don't override this, this module reverts to the [default meow exit code](https://github.com/sindresorhus/meow/blob/master/readme.md#meowoptions).
+Set a custom exit code for the 'help' command. If you don't override this, this module reverts to the [default meow exit code](https://github.com/sindresorhus/meow/blob/master/readme.md#meowoptions) (which is `2`).
 
 ## License
 

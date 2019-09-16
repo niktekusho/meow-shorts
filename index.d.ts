@@ -1,8 +1,6 @@
 import { Result } from 'meow';
 import meow = require('meow');
 
-export default wrap;
-
 /**
  * Wrap the object created by the meow function in order to enable shortcuts for:
  *
@@ -14,13 +12,13 @@ export default wrap;
  * @param cli Meow's returned object.
  * @param options Options
  */
-declare function wrap(cli: meow.Result, options?: wrap.IOptions): void;
+declare function wrap(cli: meow.Result, options?: wrap.Options): void;
 
 declare namespace wrap {
 	/**
 	 * Control which features to enable/disable for this module.
 	 */
-	export interface IOptions {
+	export interface Options {
 		/**
 		 * Explicitly disable the '-h' shortcut to the 'help' command.
 		 */
@@ -31,7 +29,10 @@ declare namespace wrap {
 		enableVersionShortcut?: boolean;
 		/**
 		 * Set a custom exit code for the 'help' command.
+		 * The default on meow's side is `2`.
 		 */
 		helpShortcutExitCode?: number;
 	}
 }
+
+export = wrap;
