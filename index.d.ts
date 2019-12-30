@@ -16,22 +16,50 @@ declare function wrap<Flags extends MinimistOptions>(cli: meow.Result<Flags>, op
 
 declare namespace wrap {
 	/**
+	 * Handle the options passed to the `update-notifier` package.
+	 */
+	export interface UpdateNotificationOptions {
+		/**
+		 * How often to check for updates in milliseconds.
+		 * @default `1000 * 60 * 60 * 24` aka 1 day
+		 */
+		updateCheckInterval?: number;
+		/**
+		 * Overrides the default update notification message.
+		 */
+		message?: string;
+	}
+
+	/**
 	 * Control which features to enable/disable for this module.
 	 */
 	export interface Options {
 		/**
-		 * Explicitly disable the '-h' shortcut to the 'help' command.
+		 * Explicitly enable or disable the '-h' shortcut to the 'help' command.
+		 * @default true
 		 */
 		enableHelpShortcut?: boolean;
 		/**
-		 * Explicitly disable the '-v' shortcut to the 'version' command.
+		 * Explicitly enable or disable the '-v' shortcut to the 'version' command.
+		 * @default true
 		 */
 		enableVersionShortcut?: boolean;
 		/**
+		 * Explicitly enable or disable the update notification.
+		 * @default true
+		 */
+		enableUpdateCheck?: boolean;
+		/**
 		 * Set a custom exit code for the 'help' command.
-		 * The default on meow's side is `2`.
+		 * Please note that the default value on meow's side is `2`.
+		 * @default undefined
 		 */
 		helpShortcutExitCode?: number;
+		/**
+		 * Allows partial options override in `update-notifier`.
+		 * @default undefined
+		 */
+		updateOptions?: UpdateNotificationOptions;
 	}
 }
 

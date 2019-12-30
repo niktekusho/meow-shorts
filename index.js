@@ -2,9 +2,17 @@ function wrap(cli, options) {
 	const opts = {
 		enableHelpShortcut: true,
 		enableVersionShortcut: true,
+		enableUpdateCheck: true,
 		helpShortcutExitCode: undefined,
+		updateOptions: undefined,
 		...options
 	};
+
+	// Initiate update checking regardless of the command given by the user.
+	if (opts.enableUpdateCheck) {
+		const updateNotifier = require('update-notifier');
+		updateNotifier({pkg: cli.pkg, ...opts.updateOptions}).notify(opts.updateOptions);
+	}
 
 	if (opts.enableHelpShortcut && cli.flags.h) {
 		// Return is unnecessary since showHelp exits the process.
