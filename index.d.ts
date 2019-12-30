@@ -1,5 +1,5 @@
-import { Result } from 'meow';
 import meow = require('meow');
+import {Options as MinimistOptions} from 'minimist-options';
 
 /**
  * Wrap the object created by the meow function in order to enable shortcuts for:
@@ -12,7 +12,7 @@ import meow = require('meow');
  * @param cli Meow's returned object.
  * @param options Options
  */
-declare function wrap(cli: meow.Result, options?: wrap.Options): void;
+declare function wrap<Flags extends MinimistOptions>(cli: meow.Result<Flags>, options?: wrap.Options): void;
 
 declare namespace wrap {
 	/**

@@ -1,6 +1,6 @@
 import * as meow from 'meow';
 import {expectType} from 'tsd';
 
-const meowShorts = require('.');
+import * as meowShorts from '.';
 
 expectType<void>(meowShorts(meow('test')));

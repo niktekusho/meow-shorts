@@ -66,16 +66,16 @@
         "url": "https://github.com/niktekusho/meow-shorts"
     },
     "devDependencies": {
-        "@types/meow": "^5.0.0",
         "ava": "^2.4.0",
-        "execa": "^2.0.4",
-        "meow": "^5.0.0",
-        "np": "^5.1.0",
-        "nyc": "^14.1.1",
-        "tsd": "^0.7.4",
-        "xo": "^0.24.0"
+        "execa": "^3.4.0",
+        "meow": "^6.0.0",
+        "minimist-options": "^4.0.2",
+        "np": "^5.2.1",
+        "nyc": "^15.0.0",
+        "tsd": "^0.11.0",
+        "xo": "^0.25.3"
     },
     "peerDependencies": {
-        "meow": "^5.0.0"
+        "meow": "^6.0.0"
     }
 }
