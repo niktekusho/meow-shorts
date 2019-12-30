@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/github/license/niktekusho/meow-shorts.svg?style=flat)](./LICENSE)
 [![](https://img.shields.io/npm/v/meow-shorts.svg)](https://www.npmjs.com/package/meow-shorts)
-[![Build Status](https://travis-ci.org/niktekusho/meow-shorts.svg?branch=master)](https://travis-ci.org/niktekusho/meow-shorts)
+[![](https://github.com/niktekusho/meow-shorts/workflows/Build%20Status/badge.svg)](https://github.com/niktekusho/meow-shorts/actions)
 [![](https://img.shields.io/node/v/meow-shorts.svg)](https://www.npmjs.com/package/meow-shorts)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![](https://img.shields.io/bundlephobia/minzip/meow-shorts.svg)](https://bundlephobia.com/result?p=meow-shorts)
