@@ -18,7 +18,7 @@ test('on default options should exit on -v flag with exit code 2', async t => {
 	try {
 		const {stdout} = await execa('fixtures/default.opts.js', ['-v']);
 		t.true(stdout.includes(pkg.version));
-	} catch (error) {
+	} catch (_) {
 		t.fail('Promise should NOT reject since meow\'s default exit code for version command is 0.');
 	}
 });

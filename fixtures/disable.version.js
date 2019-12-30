@@ -17,4 +17,4 @@ meowShorts(sampleApp, {
 	enableVersionShortcut: false
 });
 
-console.log(sampleApp.flags.v);
+console.log(sampleApp.unnormalizedFlags.vtest);
